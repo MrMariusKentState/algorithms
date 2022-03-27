@@ -165,3 +165,223 @@ median(nums1,nums2)
 
 
 
+
+function stability (array) {
+
+    count = 0
+
+    for(i = 0; i < array.length; i++) {
+        for(j = i + 1; j < array.length; j++) {
+            temp1 = array[i + 1] - array[i]
+            temp2 = array[j + 1] - array[j]
+            console.log(array[i],array[j],count)
+            
+            if(temp1 != temp2) {
+                break
+            }
+            if (temp1 == temp2) {
+                for(k = j+1; k<array.length; k++) {
+                    temp3 = array[k + 1] - array[k]
+                    if(temp2 != temp3){
+                        count++
+                        break
+                    }
+                }
+                
+            }
+        }
+    }
+
+    return count
+
+}
+
+array = [-1,1,3,3,3,2,3,2,1,0]
+final = stability(array);
+console.log(final)
+
+
+
+
+function hillsandvalleys (array) {
+    
+    count = 0
+
+    for(i = 0; i < array.length; i++) {
+    console.log(i, count)
+        if (i == 0) {
+            for(j = i + 1; j < array.length; j++) {
+                if(array[j] != array[0]) {
+                    count++
+                    i = j - 1
+                    break
+                }
+            }
+        }
+
+       if(array[i] < array[i + 1] && array[i + 1] < array[i + 2]) {
+           continue
+       }
+
+       if(array[i] > array[i + 1] && array[i + 1] > array[i + 2]){
+           continue
+       }
+
+       if(array[i - 1] < array [i] && array[i] > array[i + 1]){
+           count++
+       }
+
+       if(array[i - 1] > array[i] && array[i] < array[i + 1]) {
+           count++
+       }
+
+       if(array[i - 1] < array[i] && array[i] == array[i + 1]) {
+           for(j = i + 1; j < array.length; j++) {
+            
+
+            if(array[j] > array[i]){
+                break
+            }
+            if(array[j] == array[i]) {
+                if(j == array.length - 1) {
+                    count++
+                    return count
+                }
+                else {
+                continue
+                }
+            }
+            if(array[j] < array[i]){
+                count++
+                i = j - 1
+                break
+            }
+           }
+       }
+
+       if(array[i - 1] > array[i] && array[i] == array[i + 1]) {
+        for(j = i + 1; j < array.length; j++) {
+
+            if(array[j] < array[i]){
+                break
+            }
+            if(array[j] == array[i]) {
+                if(j == array.length - 1) {
+                    count++
+                    return count
+                }
+                else {
+                continue
+                }
+            }
+            if(array[j] > array[i]){
+                count++
+                i = j - 1
+                break
+            }
+        }
+    }
+
+    if (i == array.length - 1) {
+        count++
+    }
+
+    }
+
+    return count
+
+}
+
+
+array = [2,2,3,4,3,3,2,2,1,1,2,5]
+final = hillsandvalleys(array)
+console.log(final)
+
+
+
+
+
+
+
+function combo (popularity, k){
+
+    newlist = []
+    newlist.push(0)
+    add = 0
+
+    for(i = 0; i < popularity.length; i++) {
+        
+        for(j = i; j < popularity.length; j++) {
+            temp = add + popularity[j]
+            newlist.push(temp)
+            console.log(add, newlist)
+            }
+        add = add + popularity[i]  
+        }
+    console.log(newlist)
+    }
+
+
+popularity = [3, 5, -2]
+k = 3
+final = combo(popularity, k)
+
+
+
+
+function duplicates (array) {
+    
+
+    for(i = 0; i<array.length; i++) {
+        for(j = i  + 1; j<array.length; j++){
+            if(array[i] == array[j]) {
+                delete array[j]
+                
+            }
+        }
+    }
+    console.log(array)
+
+    for(k = 0; k<array.length; k++){
+        if(array[k] != null) {
+            continue
+        }
+        else {
+            for(l = k + 1; l<array.length; l++){
+                array[k] = array[l]
+            }
+        }
+    }
+    console.log(array)
+
+}
+
+array = [0,0,1,1,1,2,2,3,3,4]
+final = duplicates(array)
+
+
+
+
+function removeelement(array, val) {
+
+    count = 0
+
+    for(i = 0; i < array.length; i++) {
+        if(array[i] == val) {
+            delete array[i]
+        }
+
+        else {
+            count++
+        }
+    }
+    
+    return count
+    
+    }
+
+
+array = [3,2,2,3]
+val = 3
+final = removeelement(array, val)
+console.log(final)
