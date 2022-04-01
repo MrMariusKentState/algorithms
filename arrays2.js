@@ -385,3 +385,22 @@ array = [3,2,2,3]
 val = 3
 final = removeelement(array, val)
 console.log(final)
+
+
+
+
+function columntitle (letters) {
+    
+    counter = 0;
+    alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    for (i = 0; i <= alphabet.length; i++) {
+        counter++
+        if(alphabet[i] == letters) {
+            return counter
+        }
+    }
+}
+
+letters = "G"
+final = columntitle(letters)
+console.log(counter)
