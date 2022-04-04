@@ -404,3 +404,29 @@ function columntitle (letters) {
 letters = "G"
 final = columntitle(letters)
 console.log(counter)
+
+
+
+function squaresarray (array) {
+
+   
+    for(i = 0; i<array.length; i++) {
+        array[i] = array[i] * array[i]
+    }
+
+    for (i = 0; i < array.length; i++) {
+        target = array[i];
+        for (j = i - 1; j >= 0 && (array[j] > target); j--) {
+            array[j+1] = array[j];
+        }
+        array[j+1] = target
+    }
+
+    return array
+    
+}
+
+
+array = [-4,-1,0,3,10]
+final = squaresarray(array)
+console.log(final)
