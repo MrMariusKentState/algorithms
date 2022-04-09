@@ -331,6 +331,7 @@ final = combo(popularity, k)
 
 function duplicates (array) {
     
+    newarray = []
 
     for(i = 0; i<array.length; i++) {
         for(j = i  + 1; j<array.length; j++){
@@ -342,23 +343,22 @@ function duplicates (array) {
     }
     console.log(array)
 
-    for(k = 0; k<array.length; k++){
-        if(array[k] != null) {
+    for(k = 0; k < array.length; k++) {
+        if(array[k] == null) {
             continue
         }
         else {
-            for(l = k + 1; l<array.length; l++){
-                array[k] = array[l]
-            }
+            newarray.push(array[k])
         }
     }
-    console.log(array)
+
+    return newarray
 
 }
 
-array = [0,0,1,1,1,2,2,3,3,4]
+array = [1,1,2]
 final = duplicates(array)
-
+console.log(final)
 
 
 
@@ -429,4 +429,28 @@ function squaresarray (array) {
 
 array = [-4,-1,0,3,10]
 final = squaresarray(array)
+console.log(final)
+
+
+
+function removeElement (nums, val) {
+
+    newarray = []
+    for(i = 0; i < nums.length; i++) {
+        if(nums[i] == val) {
+            newarray.push("")
+        }
+        else {
+            newarray.push(nums[i])
+        }
+
+    }
+    
+    return newarray
+};
+
+
+nums = [3,2,2,3]
+val = 3
+final = removeElement(nums, val)
 console.log(final)
