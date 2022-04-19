@@ -454,3 +454,24 @@ nums = [3,2,2,3]
 val = 3
 final = removeElement(nums, val)
 console.log(final)
+
+
+
+
+function staircase (coins) {
+    rows = 0
+    for(i = 1; i <= coins; i++ ) {
+        console.log(coins, rows)
+        coins = coins - i;
+            if(coins < 0) {
+                break
+            }
+        rows++
+    }
+    return rows
+}
+
+
+coins = 8
+final = staircase(coins)
+console.log(final)
