@@ -475,3 +475,78 @@ function staircase (coins) {
 coins = 8
 final = staircase(coins)
 console.log(final)
+
+
+
+function segments (chars) {
+    spaces = 0
+    for(i = 0; i <= chars.length; i++) {
+        console.log(chars[i])
+        if(chars[i] == " "){
+            spaces++
+        }
+    }
+    words = spaces + 1
+    return words
+}
+
+chars = "Hello"
+final = segments(chars)
+console.log(final)
+
+
+
+// function common (array) {
+//     newarr = []
+//     for(i = 0; i < array.length; i++) {
+//         for(j = 0; j < array[i].length; j++ ) {
+           
+//         }
+//     }
+
+// }
+
+// array = ["bella","label","roller"]
+// final = common(array)
+// console.log(final)
+
+
+// function maxsixnine (num) {
+//     numstr = num.toString();
+//     max = numstr
+//     for(i = 0; i < numstr.length; i++) {
+//         console.log(numstr[i])
+//         numstr[i] = 9
+//         if(numstr > max) {
+//             numstr = max
+//         }
+//     }
+//     return max
+
+
+// }
+
+// num = 6996
+// final = maxsixnine(num)
+// console.log(final)
+
+// https://leetcode.com/problems/maximum-69-number/
+
+
+function goodpairs (array) {
+    
+    count = 0
+    for(i = 0; i < array.length; i++) {
+        for(j = i + 1; j < array.length; j++) {
+            if (array[i] == array[j]) {
+                count++
+            }
+        }
+    }
+    return count
+}
+
+
+nums = [1,1,1,1]
+final = goodpairs(nums)
+console.log(final)
