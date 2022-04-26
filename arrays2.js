@@ -607,3 +607,26 @@ function goodpairs (array) {
 nums = [1,1,1,1]
 final = goodpairs(nums)
 console.log(final)
+
+
+
+function squaretriples (num) {
+
+    count = 0
+    for(i = 1; i < num; i++) {
+        for(j = 1; j < num; j++){
+            for(k = 1; k <= num; k++) {
+            if(i ** 2 + j ** 2 == k ** 2) {
+                count++
+            }
+            }
+        }
+    }
+    return count
+
+}
+
+
+num = 10
+final = squaretriples(num)
+console.log(final)
