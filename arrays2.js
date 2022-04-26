@@ -496,6 +496,61 @@ console.log(final)
 
 
 
+function uniquesum(array) {
+    sum = 0
+    
+    for(i = 0; i < array.length; i++) {
+
+        if (array.length == 1){
+            sum = sum + array[i]
+            return sum
+        }
+        
+        for(j = 0; j < array.length; j++) {
+            
+            if(i == j) {
+                continue
+            }
+
+            if(array[i] == array[j]) {
+                break
+            }
+            if(j == array.length - 1 && array[i] != array[j]){
+                sum = sum + array[i]
+            }
+        }
+    }
+
+    k = array.length - 1
+    
+        for(l = k - 1; l >= 0; l--) {
+            if(array[k] == array[l]) {
+                break
+            }
+            if(l == 0 && array[k] != array[l]){
+                sum = sum + array[k]
+            }
+
+        }
+    
+
+    return sum
+
+}
+
+
+array = [10,4,10,9,5]
+final = uniquesum(array)
+console.log(final)
+
+
+
+
+
+
+
+
+
 // function common (array) {
 //     newarr = []
 //     for(i = 0; i < array.length; i++) {
@@ -509,6 +564,8 @@ console.log(final)
 // array = ["bella","label","roller"]
 // final = common(array)
 // console.log(final)
+
+// https://leetcode.com/problems/find-common-characters/
 
 
 // function maxsixnine (num) {
