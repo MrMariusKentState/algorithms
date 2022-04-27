@@ -630,3 +630,23 @@ function squaretriples (num) {
 num = 10
 final = squaretriples(num)
 console.log(final)
+
+
+
+function lowhigh (low, high) {
+    count = 0
+    for(i = low; i >= low && i <= high; i++ ) {
+        if(i % 2 != 0) {
+            count++
+        }
+    }
+
+    return count
+
+}
+
+
+low = 3
+high = 7
+final = lowhigh(low,high)
+console.log(final)
