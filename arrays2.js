@@ -650,3 +650,32 @@ low = 3
 high = 7
 final = lowhigh(low,high)
 console.log(final)
+
+
+
+
+function sum (num1, num2) {
+    return num1 + num2
+}
+
+num1 = 8
+num2 = 5
+final = sum(num1, num2)
+console.log(final)
+
+
+
+function productminussum (num) {
+    let arr = Array.from(String(num), Number);
+    total = 0
+    product = 1
+    for(i = 0; i < arr.length; i++) {
+        total = total + arr[i]
+        product = product * arr[i]
+    }
+    return product - total
+}
+
+num = 4421
+final = productminussum(num)
+console.log(final)
