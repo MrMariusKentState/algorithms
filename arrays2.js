@@ -679,3 +679,31 @@ function productminussum (num) {
 num = 4421
 final = productminussum(num)
 console.log(final)
+
+
+
+function perfectnumber (num) {
+    divisors = []
+    for(i = 1; i < num; i++) {
+        if(num % i == 0){
+            divisors.push(i)
+        }
+    }
+    total = 0
+    for(j = 0; j < divisors.length; j++) {
+        total = total + divisors[j]
+    }
+
+    if (total == num) {
+        return true
+    }
+    else {
+        return false
+    }
+
+}
+
+
+num = 6
+final = perfectnumber(num)
+console.log(final)
