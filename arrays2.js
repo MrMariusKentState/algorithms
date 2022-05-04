@@ -707,3 +707,32 @@ function perfectnumber (num) {
 num = 6
 final = perfectnumber(num)
 console.log(final)
+
+
+
+// String Dupes function in progress from leetcode
+
+// function stringdupes (s) {
+
+//     var word = s
+
+//     for(i = 0; i < word.length; i++) {
+//             if(word[i] == word[i + 1]) {
+//                console.log("word[i] is ", word[i])
+
+//                word.slice(i)
+//                word.slice(word[i + 1])
+               
+//                console.log("word[i] is now", word[i])
+//             }
+
+        
+//     }
+
+//     return word
+// }
+
+
+// word = "abbaca"
+// final = stringdupes(word)
+// console.log(final)
