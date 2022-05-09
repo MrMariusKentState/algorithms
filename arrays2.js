@@ -720,19 +720,44 @@ console.log(final)
 //             if(word[i] == word[i + 1]) {
 //                console.log("word[i] is ", word[i])
 
-//                word.slice(i)
-//                word.slice(word[i + 1])
+//                word.slice(i, 2)
                
 //                console.log("word[i] is now", word[i])
 //             }
-
+       
         
 //     }
-
 //     return word
+
 // }
 
 
 // word = "abbaca"
 // final = stringdupes(word)
 // console.log(final)
+
+
+function pow (x, n) {
+    return x ** n
+}
+
+base = 2
+power = -2
+final = pow(base,power)
+console.log(final)
+
+
+
+
+function superpow(x, n) {
+    num = +n.join("")
+    return x ** num
+}
+
+
+a = 4
+b = [2,0]
+final = superpow(a, b)
+console.log(final)
+
+
