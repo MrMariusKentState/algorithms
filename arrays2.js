@@ -747,7 +747,7 @@ final = pow(base,power)
 console.log(final)
 
 
-
+// https://leetcode.com/problems/super-pow/
 
 function superpow(x, n) {
     num = +n.join("")
@@ -761,3 +761,38 @@ final = superpow(a, b)
 console.log(final)
 
 
+// https://leetcode.com/problems/best-time-to-buy-and-sell-stock/submissions/
+//working on the below algorithm
+
+function buysellstock (array) {
+
+min = array[0]
+index = 0
+
+for(i = 0; i < array.length; i++) {
+    if(array[i] < min) {
+        min = array[i]
+        index = i
+        }
+    }
+console.log(min, index)
+
+max = array[index]
+for(j = index + 1; j < array.length; j++) {
+    if(array[j] > max) {
+        max = array[j]
+    }
+}
+    console.log(max)
+    final = max - min
+    if (max <= min) {
+        return 0
+    }
+    else return final
+    
+}
+
+
+prices = [7,6,4,3,1]
+final = buysellstock(prices)
+console.log(final)
