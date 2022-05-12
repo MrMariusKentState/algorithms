@@ -796,3 +796,99 @@ for(j = index + 1; j < array.length; j++) {
 prices = [7,6,4,3,1]
 final = buysellstock(prices)
 console.log(final)
+
+
+
+function consectriplet (array) {
+    for(i = 0; i < array.length; i++) {
+        for(j = i + 1; j < i + 3; j++){
+            if (array[i] < array[j] && array[j] < array[j + 1]) {
+                return true
+            }
+        }
+    }
+    return false
+}
+
+
+nums = [2,1,5,0,4,6]
+final = consectriplet(nums)
+console.log(final)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// https://leetcode.com/problems/intersection-of-two-arrays/
+
+// function intersection (nums1, nums2) {
+
+//     count = 0
+//     intersected = []
+//     for(i = 0; i < nums1.length; i++) {
+//         for(j = 0; j < nums2.length; j++) {
+//             if(nums1[i] == nums2[j]) {
+//                 intersected.push(nums1[i])
+//                 break
+//             }
+//         }
+    
+//     }
+//     console.log(intersected)
+//     final = 1
+//     for(k = 0; k < intersected.length; k++) {
+//         for(l = 0; l < intersected.length; l++){
+//             if (intersected[k] == intersected[l]) {
+//                 break
+//             }
+//             else {
+//                 final++
+//             }
+//         }
+            
+//         }
+//     return final
+//     }
+
+
+// nums1 = [4,9,5]
+// nums2 = [9,4,9,8,4]
+// final = intersection(nums1, nums2)
+// console.log(final)
+
+
+
+
+
+
+
+
+// function wordpattern (pattern, s) {
+    
+//     for(i = 0; i < pattern.length; i++) {
+//         for(j = 0; j < pattern.length; j++) {
+//             setpattern = pattern[i]
+//             sets = s[j]
+//             if(pattern[i] != pattern[i + 1] && sets[j] != sets[j + 1]) {
+//                 continue
+//             }
+//             else{
+//                 return False
+//             }
+//         }
+//     }
+//     return True
+// }
+
+// pattern = "abba"
+// s = "dog cat cat dog"
+// final = wordpattern(pattern, s)
