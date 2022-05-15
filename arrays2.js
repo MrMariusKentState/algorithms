@@ -818,7 +818,22 @@ console.log(final)
 
 
 
+function dupe (nums) {
 
+    for(i = 0; i < nums.length; i++) {
+        for(j = i + 1; j < nums.length; j++) {
+            if(nums[i] == nums[j]) {
+                return nums[i]
+            }
+        }
+    }
+
+}
+
+
+nums = [3,1,3,4,2]
+final = dupe(nums)
+console.log(final)
 
 
 
@@ -892,3 +907,38 @@ console.log(final)
 // pattern = "abba"
 // s = "dog cat cat dog"
 // final = wordpattern(pattern, s)
+
+
+
+
+
+function majority (nums) {
+
+    if(nums.length == 1){
+        return nums
+    }
+
+    
+    for(i = 0; i < nums.length; i++){
+        counter = 1
+        for(j = i + 1; j < nums.length; j++) {
+            
+            if (nums[i] == nums[j]) {
+                console.log("i is", i, "j is", j, "index is", nums[j], "counter is", counter)
+                counter++
+            }
+
+            if (counter > (nums.length / 2)) {
+                return nums[i]
+            }
+
+        }
+
+        
+    }
+}
+
+nums = [3,2,3]
+final = majority(nums)
+console.log(final)
+
