@@ -942,3 +942,25 @@ nums = [3,2,3]
 final = majority(nums)
 console.log(final)
 
+
+
+
+function divide (dividend, divisor) {
+    count = 0
+
+    if(divisor < 0 || dividend < 0){
+        return "Please select two different values"
+    }
+
+    for(i = dividend - divisor; i >= 0; i = i - divisor){
+        count++
+    }
+
+    return count
+
+}
+
+dividend = 15
+divisor = 3
+final = divide(dividend, divisor)
+console.log(final)
