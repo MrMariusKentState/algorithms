@@ -964,3 +964,62 @@ dividend = 15
 divisor = 3
 final = divide(dividend, divisor)
 console.log(final)
+
+
+
+
+// https://leetcode.com/problems/keep-multiplying-found-values-by-two/
+
+function multiplytwo (nums, original) {
+
+    base = original
+
+    for(i = 0; i < nums.length; i++) {
+        if(nums[i] == original) {
+            base = original * 2
+        }
+    }
+
+}
+
+
+nums = [5,3,6,1,12]
+original = 3
+final = multiplytwo(nums, original)
+
+
+
+
+//Given an unsorted array A of size N that contains only non-negative integers, find a continuous sub-array which adds to a given number S.
+//In case of multiple subarrays, return the subarray which comes first on moving from left to right.
+
+
+
+function continuoussubarray (arr, n, sum) {
+
+    firstchar = 0
+    lastchar = 0
+    final = []
+
+    for(i = 0; i < arr.length; i++) {  
+        total = arr[i]
+        for(j = i + 1; j < arr.length; j++) {
+            total = arr[j] + total
+            if(total == sum) {
+                firstchar = i + 1
+                lastchar = j + 1
+                final.push(firstchar)
+                final.push(lastchar)
+                return final
+            }
+        }
+
+    }
+}
+
+
+arr = [1,2,3,4,5,6,7,8,9,10]
+n = 10
+sum = 15
+final = continuoussubarray(arr, n, sum)
+console.log(final)
