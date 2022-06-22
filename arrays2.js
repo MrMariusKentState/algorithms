@@ -845,40 +845,25 @@ console.log(final)
 
 // https://leetcode.com/problems/intersection-of-two-arrays/
 
-// function intersection (nums1, nums2) {
-
-//     count = 0
-//     intersected = []
-//     for(i = 0; i < nums1.length; i++) {
-//         for(j = 0; j < nums2.length; j++) {
-//             if(nums1[i] == nums2[j]) {
-//                 intersected.push(nums1[i])
-//                 break
-//             }
-//         }
+function intersection (nums1, nums2) {
+    intersected = []
+    for(i = 0; i < nums1.length; i++) {
+        for(j = 0; j < nums2.length; j++) {
+            if(nums1[i] == nums2[j]) {
+                intersected.push(nums1[i])
+                break
+            }
+        }
     
-//     }
-//     console.log(intersected)
-//     final = 1
-//     for(k = 0; k < intersected.length; k++) {
-//         for(l = 0; l < intersected.length; l++){
-//             if (intersected[k] == intersected[l]) {
-//                 break
-//             }
-//             else {
-//                 final++
-//             }
-//         }
-            
-//         }
-//     return final
-//     }
+    }
+    return intersected.filter((item,index) => intersected.indexOf(item) === index)
+    }
 
 
-// nums1 = [4,9,5]
-// nums2 = [9,4,9,8,4]
-// final = intersection(nums1, nums2)
-// console.log(final)
+nums1 = [1,2,2,1]
+nums2 = [2,2]
+final = intersection(nums1, nums2)
+console.log(final)
 
 
 
