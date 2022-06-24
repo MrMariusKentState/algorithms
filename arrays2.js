@@ -872,26 +872,26 @@ console.log(final)
 
 
 
-// function wordpattern (pattern, s) {
+function wordpattern (pattern, s) {
     
-//     for(i = 0; i < pattern.length; i++) {
-//         for(j = 0; j < pattern.length; j++) {
-//             setpattern = pattern[i]
-//             sets = s[j]
-//             if(pattern[i] != pattern[i + 1] && sets[j] != sets[j + 1]) {
-//                 continue
-//             }
-//             else{
-//                 return False
-//             }
-//         }
-//     }
-//     return True
-// }
+    for(i = 0; i < pattern.length; i++) {
+        for(j = 0; j < pattern.length; j++) {
+            setpattern = pattern[i]
+            sets = s[j]
+            if(pattern[i] != pattern[i + 1] && sets[j] != sets[j + 1]) {
+                continue
+            }
+            else{
+                return False
+            }
+        }
+    }
+    return True
+}
 
-// pattern = "abba"
-// s = "dog cat cat dog"
-// final = wordpattern(pattern, s)
+pattern = "abba"
+s = "dog cat cat dog"
+final = wordpattern(pattern, s)
 
 
 
@@ -1007,4 +1007,41 @@ arr = [1,2,3,4,5,6,7,8,9,10]
 n = 10
 sum = 15
 final = continuoussubarray(arr, n, sum)
+console.log(final)
+
+
+
+
+//https://leetcode.com/problems/reverse-integer/
+//value must be within a set of values
+
+function reverseinteger (x) {
+
+    y = Math.abs(x)
+    value = y.toString();
+    final = ""
+    
+    if(x < 0){
+        final += '-'
+    }
+
+    for(i = value.length - 1; i >= 0; i--){
+        if(i == value.length - 1 && value[i] == 0) {
+            continue
+        }
+        else {
+            final += value[i];
+        }
+
+
+    }
+
+    
+
+    return final
+   
+}
+
+variable = 120
+final = reverseinteger(variable)
 console.log(final)
