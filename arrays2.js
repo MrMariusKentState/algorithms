@@ -1036,9 +1036,12 @@ function reverseinteger (x) {
 
     }
 
-    
+    finalnum = parseInt(final)
+    if(finalnum > (2 ** 31) || finalnum < (-(2 **31))) {
+        return 0
+    }
 
-    return final
+    return finalnum
    
 }
 
