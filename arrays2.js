@@ -1048,3 +1048,48 @@ function reverseinteger (x) {
 variable = 120
 final = reverseinteger(variable)
 console.log(final)
+
+
+
+
+
+//https://leetcode.com/problems/longest-substring-without-repeating-characters/
+//work in progress
+
+function longestsubstring (x) {
+    
+    counter = []
+    count = 1
+    
+    for(i = 0; i < x.length; i++) {
+        for(j = i + 1; j < x.length; j++) {
+            if(x[i] != x[j]) {
+                count++
+            }
+            if(x[i] == x[j]) { 
+                counter.push(count)
+                count = 1
+                break
+            }
+        }
+
+    }
+    console.log(counter)
+    max = counter[0]
+    for(k = 1; k < counter.length; k++) {
+        if(counter[k] > max) {
+            max = counter[k]
+        }
+
+    }
+
+
+
+    return max
+
+}
+
+
+s = "abcabcbb"
+final = longestsubstring(s)
+console.log(final)
