@@ -1093,3 +1093,45 @@ function longestsubstring (x) {
 s = "abcabcbb"
 final = longestsubstring(s)
 console.log(final)
+
+
+
+//https://leetcode.com/problems/letter-combinations-of-a-phone-number/
+//letter combinations
+//work in progress
+
+
+// function letters (digits) {
+//     letters = []
+//     for(i = 0; i < digits.length; i++) {
+//         for(j = i + 1; j < digits.length; j++) {
+//             for(k = j + 1; k < digits.length; k++) {
+//                 for(l = k + 1; l < digits.length; l++){
+
+//                 }
+//             }
+//         }
+//     }
+// }
+
+
+// digits = '23'
+// final = letters(digits)
+// console.log(final)
+
+
+
+
+//https://leetcode.com/problems/find-the-duplicate-number/
+//find dupes
+//work in progress
+
+function finddupe (nums) { 
+    let dupe = nums.filter((a, index) => {return nums.indexOf(a) !== index})
+    return dupe
+}
+
+
+nums = [1,3,4,2,2]
+final = finddupe(nums)
+console.log(final)
