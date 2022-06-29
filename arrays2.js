@@ -1135,3 +1135,25 @@ function finddupe (nums) {
 nums = [1,3,4,2,2]
 final = finddupe(nums)
 console.log(final)
+
+
+
+function excludedupe (nums) { 
+    let dupe = nums.filter((a, index) => {return nums.indexOf(a) === index})
+    return dupe
+}
+
+
+nums = [1,1,2,3,3]
+final = excludedupe(nums)
+console.log(final)
+
+
+//https://www.javascripttutorial.net/array/javascript-remove-duplicates-from-array/
+//let chars = ['A', 'B', 'A', 'C', 'B'];
+
+//let uniqueChars = chars.filter((c, index) => {
+//    return chars.indexOf(c) === index;
+//});
+//console.log(uniqueChars);
+//[ 'A', 'B', 'C' ]
