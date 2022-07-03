@@ -1157,3 +1157,29 @@ console.log(final)
 //});
 //console.log(uniqueChars);
 //[ 'A', 'B', 'C' ]
+
+
+
+//https://leetcode.com/problems/first-missing-positive/
+//working on the below:
+
+function smallestpositive (nums) {
+    
+    n = 1
+
+    for(i = 0; i < nums.length; i++){
+        if(nums[i] == n){
+            n++
+            console.log(i, n)
+            i = 0
+        }
+
+    }
+    return n
+
+}
+
+
+nums  = [3,2,1]
+final = smallestpositive(nums)
+console.log(final)
