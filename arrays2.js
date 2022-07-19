@@ -1180,6 +1180,6 @@ function smallestpositive (nums) {
 }
 
 
-nums  = [3,2,1]
+nums  = [2,1]
 final = smallestpositive(nums)
 console.log(final)
