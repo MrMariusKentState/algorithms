@@ -1161,7 +1161,7 @@ console.log(final)
 
 
 //https://leetcode.com/problems/first-missing-positive/
-//working on the below. Need to identify largest positive integer if array values are descending.
+//working on the below:
 
 function smallestpositive (nums) {
     
@@ -1182,4 +1182,33 @@ function smallestpositive (nums) {
 
 nums  = [2,1]
 final = smallestpositive(nums)
+console.log(final)
+
+
+//https://leetcode.com/problems/missing-number/
+//work in progress:
+
+function missingrange (nums) {
+    x = 0
+
+    for(i = 0; i <= nums.length; i++){
+        console.log("i is ", i, "x is", x)
+        if(nums[i] == x) {
+            x++
+            i == 0
+        }
+        if(i == nums.length - 1 && nums[i] != x){
+            return x
+        }
+        if(i == nums.length){
+            x++
+            return x
+        }
+        
+    }
+}
+
+
+nums = [9,6,4,2,3,5,7,0,1]
+final = missingrange(nums)
 console.log(final)
