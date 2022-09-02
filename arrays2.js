@@ -1215,3 +1215,28 @@ console.log(final)
 
 
 
+//https://leetcode.com/problems/single-number/
+//work in progress below
+
+function singlenum (x) {
+
+    single = 0
+    for(i = 0; i < x.length; i++) {
+        for(j = 0; j < x.length; j++) {
+            if(x[i] == x[j] && i != j){
+                break
+            }
+            else {
+                single = x[i]
+            }
+        }
+    }
+
+    return single
+
+
+}
+
+nums = [4,1,2,1,2]
+final = singlenum(nums)
+console.log(final)
