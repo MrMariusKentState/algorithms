@@ -1221,14 +1221,27 @@ console.log(final)
 function singlenum (x) {
 
     single = 0
+
+    if(x.length == 1){
+        single = x[0]
+        return single
+    }
+
     for(i = 0; i < x.length; i++) {
         for(j = 0; j < x.length; j++) {
+            console.log("x[i] is ",x[i], "x[j] is", x[j], "single is", single )
             if(x[i] == x[j] && i != j){
                 break
             }
+
+            if(j == x.length - 1 && x[i] != x[j]){
+                single = x[i]
+            }
+            
             else {
                 single = x[i]
             }
+            
         }
     }
 
