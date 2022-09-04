@@ -1223,24 +1223,37 @@ function singlenum (x) {
     single = 0
 
     if(x.length == 1){
-        single = x[0]
-        return single
+        return x[0]
     }
 
     for(i = 0; i < x.length; i++) {
         for(j = 0; j < x.length; j++) {
-            console.log("x[i] is ",x[i], "x[j] is", x[j], "single is", single )
+            // console.log("x[i] is ",x[i], "x[j] is", x[j], "single is", single )
+            
             if(x[i] == x[j] && i != j){
                 break
             }
 
-            if(j == x.length - 1 && x[i] != x[j]){
-                single = x[i]
+            // if(j == x.length - 1 && x[i] != x[j]){
+            //     single = x[i]
+            // }
+
+
+            if(j == x.length - 1){
+                if(x[i] != x[j]) {
+                    single = x[i]
+                }
+                if(i == x.length - 1 && x[i] == x[j]) {
+                    single = x[i]
+                }
+                
             }
-            
-            else {
-                single = x[i]
-            }
+
+
+            // if(i == x.length - 1 && j == x.length - 1 && x[i] == x[j]){
+            //     single = x[i]
+            // }
+        
             
         }
     }
@@ -1250,6 +1263,25 @@ function singlenum (x) {
 
 }
 
-nums = [4,1,2,1,2]
+nums = [1]
 final = singlenum(nums)
 console.log(final)
+
+
+
+//https://leetcode.com/problems/valid-sudoku/
+//work in progress
+
+function sudoku(x) {
+
+    i = 0
+    j = 0
+    k = 0
+
+    for(i = 0; i < 9; i++){
+        for(j = i + 1; j < 9; j++) {
+            for (k = [i][j]; k < 3; k++)
+        }
+    }
+
+}
