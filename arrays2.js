@@ -1269,6 +1269,41 @@ console.log(final)
 
 
 
+// https://leetcode.com/problems/ugly-number/
+//work in progress
+
+
+function IsUgly (n) {
+
+    if(n == 1) {
+        return true
+    }
+
+    for(i = 2; i < n; i++) {
+
+        if(n % i == 0) {
+
+            if (i == 2 || i == 3 || i == 5) {
+                continue
+            }
+
+            else {
+                return false
+            }
+
+        }
+
+    }
+    return true
+
+}
+
+n = 8
+final = IsUgly(n)
+console.log(final)
+
+
+
 //https://leetcode.com/problems/valid-sudoku/
 //work in progress
 
@@ -1285,3 +1320,17 @@ function sudoku(x) {
     }
 
 }
+
+
+s = [["5","3",".",".","7",".",".",".","."]
+,["6",".",".","1","9","5",".",".","."]
+,[".","9","8",".",".",".",".","6","."]
+,["8",".",".",".","6",".",".",".","3"]
+,["4",".",".","8",".","3",".",".","1"]
+,["7",".",".",".","2",".",".",".","6"]
+,[".","6",".",".",".",".","2","8","."]
+,[".",".",".","4","1","9",".",".","5"]
+,[".",".",".",".","8",".",".","7","9"]]
+
+final = sudoku(s)
+console.log(final)
