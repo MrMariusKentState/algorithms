@@ -1315,8 +1315,10 @@ function sudoku(x) {
 
     for(i = 0; i < 9; i++){
         for(j = i + 1; j < 9; j++) {
-            for (k = [i][j]; k < 3; k++)
-        }
+            for (k = [i][j]; k < 3; k++){
+                
+            }
+        
     }
 
 }
